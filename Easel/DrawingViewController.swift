@@ -50,32 +50,19 @@ class DrawingViewController: UIViewController {
         if let touch =  touches.first{
             let point = touch.location(in: self.imageView)
             
-            //To draw we have to begin and get the context
-            UIGraphicsBeginImageContext(self.imageView.frame.size)
-            let context = UIGraphicsGetCurrentContext()
-            
-            self.imageView.image?.draw(in: CGRect(x: 0, y: 0, width: self.imageView.frame.size.width, height: self.imageView.frame.size.height))
-            
-            context?.move(to: self.lastPoint)
-            context?.addLine(to: point)
-            
-            context?.setLineWidth(15.0)
-            context?.setLineCap(.round)
-            
-            context?.setStrokeColor(UIColor(displayP3Red: red, green: green, blue: blue, alpha: 1).cgColor)
-            
-            context?.strokePath()
-            
-            self.imageView.image = UIGraphicsGetImageFromCurrentImageContext()
-            
-            UIGraphicsEndImageContext()
+            drawBetweenPoints(firstPoint: self.lastPoint,secondPoint: point)
             
             self.lastPoint = point
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("Ended")
+        if let touch =  touches.first{
+            let point = touch.location(in: self.imageView)
+            
+            drawBetweenPoints(firstPoint: self.lastPoint,secondPoint: point)
+        }
+
         self.buttonsStackView.isHidden = false
     }
     
@@ -91,6 +78,28 @@ class DrawingViewController: UIViewController {
             
             settingsVC.drawingVC = self
         }
+    }
+    
+    func drawBetweenPoints(firstPoint:CGPoint, secondPoint:CGPoint){
+        //To draw we have to begin and get the context
+        UIGraphicsBeginImageContext(self.imageView.frame.size)
+        let context = UIGraphicsGetCurrentContext()
+        
+        self.imageView.image?.draw(in: CGRect(x: 0, y: 0, width: self.imageView.frame.size.width, height: self.imageView.frame.size.height))
+        
+        context?.move(to: firstPoint)
+        context?.addLine(to: secondPoint)
+        
+        context?.setLineWidth(15.0)
+        context?.setLineCap(.round)
+        
+        context?.setStrokeColor(UIColor(displayP3Red: red, green: green, blue: blue, alpha: 1).cgColor)
+        
+        context?.strokePath()
+        
+        self.imageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
     }
     
     @IBAction func blueTapped(_ sender: Any) {

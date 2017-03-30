@@ -25,4 +25,12 @@ class SettingsViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
+    @IBAction func shareTapped(_ sender: Any) {
+        
+        if let image = self.drawingVC?.imageView.image{
+            let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            
+            self.present(activityVC, animated: true, completion: nil)
+        }
+    }
 }

@@ -131,7 +131,21 @@
                     <view key="view" contentMode="scaleToFill" id="SVX-F3-SPh" customClass="Setti">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJa-0E-YMr">
+                                <rect key="frame" x="95.5" y="114" width="183" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="Share Art"/>
+                                <connections>
+                                    <action selector="shareTapped:" destination="zgW-el-6aF" eventType="touchUpInside" id="bZh-oa-rJs"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VJa-0E-YMr" firstAttribute="centerX" secondItem="SVX-F3-SPh" secondAttribute="centerX" id="eMg-Iw-7kR"/>
+                            <constraint firstItem="VJa-0E-YMr" firstAttribute="top" secondItem="DNx-Iy-XCd" secondAttribute="bottom" constant="50" id="hSB-3T-JfE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="La4-ou-9Ld">
                         <barButtonItem key="rightBarButtonItem" title="Erase" id="nE8-vt-1XB">
