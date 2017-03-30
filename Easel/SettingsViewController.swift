@@ -9,6 +9,8 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +18,5 @@ class SettingsViewController: UIViewController {
 
         self.navigationController?.isNavigationBarHidden =  false
     }
-    
-  
+
 }
