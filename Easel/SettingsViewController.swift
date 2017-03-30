@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SettingsViewController.swift
 //  Easel
 //
 //  Created by Vasco Gomes on 30/03/2017.
@@ -8,15 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+        self.navigationController?.isNavigationBarHidden =  false
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden =  true
-    }
+  
 }
-

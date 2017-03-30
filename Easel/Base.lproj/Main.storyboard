@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RpX-X7-KyW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Easel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,131 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Du6-JP-3Pj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="y5A-Fj-WoV">
+                                <rect key="frame" x="10" y="607" width="355" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bj-gq-I5v">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="K3d-a5-cAJ"/>
+                                            <constraint firstAttribute="width" constant="50" id="Lms-XX-o3i"/>
+                                        </constraints>
+                                        <state key="normal" image="blue"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpm-8m-3gd">
+                                        <rect key="frame" x="61" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="LgM-L6-NxO"/>
+                                            <constraint firstAttribute="height" constant="50" id="Xqf-1T-l8U"/>
+                                        </constraints>
+                                        <state key="normal" image="green"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ7-vj-eaj">
+                                        <rect key="frame" x="122" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ys3-0v-c7c"/>
+                                            <constraint firstAttribute="width" constant="50" id="mDx-2W-cT7"/>
+                                        </constraints>
+                                        <state key="normal" image="red"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhn-tw-BVx">
+                                        <rect key="frame" x="183" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="PAH-nV-5lj"/>
+                                            <constraint firstAttribute="height" constant="50" id="kTk-Ie-3A0"/>
+                                        </constraints>
+                                        <state key="normal" image="yellow"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ne-RP-dWF">
+                                        <rect key="frame" x="244" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="OSH-01-cfb"/>
+                                            <constraint firstAttribute="width" constant="50" id="rgG-Ka-QoP"/>
+                                        </constraints>
+                                        <state key="normal" image="random"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mew-dy-N50">
+                                        <rect key="frame" x="305" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="E2Q-Ki-eht"/>
+                                            <constraint firstAttribute="height" constant="50" id="wg9-53-Dit"/>
+                                        </constraints>
+                                        <state key="normal" image="settings"/>
+                                        <connections>
+                                            <segue destination="zgW-el-6aF" kind="show" id="uGP-Jm-X5B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dyg-34-e3t"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="y5A-Fj-WoV" secondAttribute="trailing" constant="10" id="CYJ-vE-yeW"/>
+                            <constraint firstItem="Du6-JP-3Pj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UH9-VW-OfP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Du6-JP-3Pj" secondAttribute="bottom" id="eVe-y1-ffa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y5A-Fj-WoV" secondAttribute="bottom" constant="10" id="ilB-uH-xwD"/>
+                            <constraint firstItem="y5A-Fj-WoV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="nS7-5V-yGG"/>
+                            <constraint firstAttribute="trailing" secondItem="Du6-JP-3Pj" secondAttribute="trailing" id="oTE-rf-LHS"/>
+                            <constraint firstItem="Du6-JP-3Pj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pBX-8r-lJ7"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7lk-gh-cy3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="bpS-uS-2RV">
+            <objects>
+                <viewController id="zgW-el-6aF" customClass="SettingsViewController" customModule="Easel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DNx-Iy-XCd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xmf-22-Utz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SVX-F3-SPh" customClass="Setti">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="La4-ou-9Ld"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8NV-QL-zL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2026" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9bO-im-fiT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RpX-X7-KyW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zf7-pG-f27">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0nD-8P-4Em"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FuV-OV-Nhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blue" width="214" height="214"/>
+        <image name="green" width="214" height="214"/>
+        <image name="random" width="214" height="214"/>
+        <image name="red" width="214" height="214"/>
+        <image name="settings" width="214" height="214"/>
+        <image name="yellow" width="214" height="214"/>
+    </resources>
 </document>

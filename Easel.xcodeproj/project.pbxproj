@@ -12,6 +12,7 @@
 		277683551E8D0E93004BE9DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277683531E8D0E93004BE9DA /* Main.storyboard */; };
 		277683571E8D0E93004BE9DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277683561E8D0E93004BE9DA /* Assets.xcassets */; };
 		2776835A1E8D0E93004BE9DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277683581E8D0E93004BE9DA /* LaunchScreen.storyboard */; };
+		277683621E8D1809004BE9DA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277683611E8D1809004BE9DA /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		277683561E8D0E93004BE9DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		277683591E8D0E93004BE9DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2776835B1E8D0E93004BE9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		277683611E8D1809004BE9DA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				2776834F1E8D0E93004BE9DA /* AppDelegate.swift */,
 				277683511E8D0E93004BE9DA /* ViewController.swift */,
+				277683611E8D1809004BE9DA /* SettingsViewController.swift */,
 				277683531E8D0E93004BE9DA /* Main.storyboard */,
 				277683561E8D0E93004BE9DA /* Assets.xcassets */,
 				277683581E8D0E93004BE9DA /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				277683521E8D0E93004BE9DA /* ViewController.swift in Sources */,
 				277683501E8D0E93004BE9DA /* AppDelegate.swift in Sources */,
+				277683621E8D1809004BE9DA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
