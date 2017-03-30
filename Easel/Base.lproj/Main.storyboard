@@ -34,6 +34,9 @@
                                             <constraint firstAttribute="width" constant="50" id="Lms-XX-o3i"/>
                                         </constraints>
                                         <state key="normal" image="blue"/>
+                                        <connections>
+                                            <action selector="blueTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SD7-cr-x5Z"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpm-8m-3gd">
                                         <rect key="frame" x="61" y="0.0" width="50" height="50"/>
@@ -42,6 +45,9 @@
                                             <constraint firstAttribute="height" constant="50" id="Xqf-1T-l8U"/>
                                         </constraints>
                                         <state key="normal" image="green"/>
+                                        <connections>
+                                            <action selector="greenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QGT-CM-iKH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ7-vj-eaj">
                                         <rect key="frame" x="122" y="0.0" width="50" height="50"/>
@@ -50,6 +56,9 @@
                                             <constraint firstAttribute="width" constant="50" id="mDx-2W-cT7"/>
                                         </constraints>
                                         <state key="normal" image="red"/>
+                                        <connections>
+                                            <action selector="redTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="42U-Dl-zoQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhn-tw-BVx">
                                         <rect key="frame" x="183" y="0.0" width="50" height="50"/>
@@ -58,6 +67,9 @@
                                             <constraint firstAttribute="height" constant="50" id="kTk-Ie-3A0"/>
                                         </constraints>
                                         <state key="normal" image="yellow"/>
+                                        <connections>
+                                            <action selector="yellowTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Lf-Mh-WuN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ne-RP-dWF">
                                         <rect key="frame" x="244" y="0.0" width="50" height="50"/>
@@ -66,6 +78,9 @@
                                             <constraint firstAttribute="width" constant="50" id="rgG-Ka-QoP"/>
                                         </constraints>
                                         <state key="normal" image="random"/>
+                                        <connections>
+                                            <action selector="randomTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXh-bv-gMx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mew-dy-N50">
                                         <rect key="frame" x="305" y="0.0" width="50" height="50"/>

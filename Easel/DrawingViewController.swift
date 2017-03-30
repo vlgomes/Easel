@@ -14,11 +14,17 @@ class DrawingViewController: UIViewController {
     @IBOutlet var buttonsStackView: UIStackView!
     
     var lastPoint = CGPoint.zero
+    var red : CGFloat = 0.0
+    var green : CGFloat = 0.0
+    var blue : CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(DrawingViewController.appBecameActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        
+        //so the start color could be blue
+        self.blueTapped(UIButton())
     }
     
     func appBecameActive(){
@@ -56,7 +62,7 @@ class DrawingViewController: UIViewController {
             context?.setLineWidth(15.0)
             context?.setLineCap(.round)
             
-            context?.setStrokeColor(UIColor(displayP3Red: 0.3, green: 0.6, blue: 0.2, alpha: 1).cgColor)
+            context?.setStrokeColor(UIColor(displayP3Red: red, green: green, blue: blue, alpha: 1).cgColor)
             
             context?.strokePath()
             
@@ -85,6 +91,36 @@ class DrawingViewController: UIViewController {
             
             settingsVC.drawingVC = self
         }
+    }
+    
+    @IBAction func blueTapped(_ sender: Any) {
+        self.red = 56 / 256
+        self.green = 109 / 256
+        self.blue = 229 / 256
+    }
+    
+    @IBAction func greenTapped(_ sender: Any) {
+        self.red = 37 / 256
+        self.green = 235 / 256
+        self.blue = 114 / 256
+    }
+    
+    @IBAction func redTapped(_ sender: Any) {
+        self.red = 229 / 256
+        self.green = 56 / 256
+        self.blue = 56 / 256
+    }
+
+    @IBAction func yellowTapped(_ sender: Any) {
+        self.red = 249 / 256
+        self.green = 215 / 256
+        self.blue = 23 / 256
+    }
+    
+    @IBAction func randomTapped(_ sender: Any) {
+        self.red = CGFloat(arc4random_uniform(256)) / 256
+        self.green = CGFloat(arc4random_uniform(256)) / 256
+        self.blue = CGFloat(arc4random_uniform(256)) / 256
     }
 }
 
