@@ -140,11 +140,33 @@
                                     <action selector="shareTapped:" destination="zgW-el-6aF" eventType="touchUpInside" id="bZh-oa-rJs"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="50" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikS-t2-EFh">
+                                <rect key="frame" x="60.5" y="247.5" width="254" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Hej-U1-utx"/>
+                                    <constraint firstAttribute="height" constant="50" id="whw-H1-pPI"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="zgW-el-6aF" eventType="valueChanged" id="NbP-ka-gAk"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brush Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaI-J9-xU7">
+                                <rect key="frame" x="124.5" y="200" width="126.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ikS-t2-EFh" firstAttribute="centerX" secondItem="SVX-F3-SPh" secondAttribute="centerX" id="0r8-kt-tqz"/>
+                            <constraint firstItem="ikS-t2-EFh" firstAttribute="top" secondItem="RaI-J9-xU7" secondAttribute="bottom" constant="15" id="9YN-d8-MmC"/>
                             <constraint firstItem="VJa-0E-YMr" firstAttribute="centerX" secondItem="SVX-F3-SPh" secondAttribute="centerX" id="eMg-Iw-7kR"/>
                             <constraint firstItem="VJa-0E-YMr" firstAttribute="top" secondItem="DNx-Iy-XCd" secondAttribute="bottom" constant="50" id="hSB-3T-JfE"/>
+                            <constraint firstItem="RaI-J9-xU7" firstAttribute="top" secondItem="VJa-0E-YMr" secondAttribute="bottom" constant="20" id="mB3-5P-Q1B"/>
+                            <constraint firstItem="RaI-J9-xU7" firstAttribute="centerX" secondItem="SVX-F3-SPh" secondAttribute="centerX" id="vDf-xX-gNj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="La4-ou-9Ld">
@@ -154,10 +176,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="slider" destination="ikS-t2-EFh" id="Jgt-Dl-fOB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8NV-QL-zL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026" y="139"/>
+            <point key="canvasLocation" x="2024.8" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9bO-im-fiT">

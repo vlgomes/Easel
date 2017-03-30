@@ -18,6 +18,8 @@ class DrawingViewController: UIViewController {
     var green : CGFloat = 0.0
     var blue : CGFloat = 0.0
     
+    var brush : CGFloat = 25.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,6 +79,7 @@ class DrawingViewController: UIViewController {
             let settingsVC = segue.destination as! SettingsViewController
             
             settingsVC.drawingVC = self
+            settingsVC.brushSize = self.brush
         }
     }
     
@@ -90,7 +93,7 @@ class DrawingViewController: UIViewController {
         context?.move(to: firstPoint)
         context?.addLine(to: secondPoint)
         
-        context?.setLineWidth(15.0)
+        context?.setLineWidth(brush)
         context?.setLineCap(.round)
         
         context?.setStrokeColor(UIColor(displayP3Red: red, green: green, blue: blue, alpha: 1).cgColor)
